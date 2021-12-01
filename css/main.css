@@ -1,0 +1,171 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.slide {
+  display: flex;
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin-top: 50px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+ul li {
+  color: white;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+ul li:hover {
+  border-bottom: 2px solid white;
+  margin-bottom: -5px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 12px;
+  font-family: "Spartan", sans-serif;
+}
+
+.main-im {
+  background-image: url("../images/desktop-image-hero-1.jpg");
+  background-repeat: no-repeat;
+  height: 534px;
+  width: 1200px;
+}
+.text {
+  flex-basis: 50%;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text h1 {
+  width: 55%;
+}
+.text p {
+  width: 75%;
+  line-height: 1.5;
+  color: hsl(0, 0%, 63%);
+}
+.text div p {
+  margin-top: 30px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+}
+.text div p:hover {
+  color: hsl(0, 0%, 63%);
+}
+.text div p span {
+  color: hsl(0, 0%, 63%);
+}
+.controls {
+  position: absolute;
+  display: flex;
+  left: 61.5%;
+  top: 69.85%;
+}
+.left,
+.right {
+  background-color: black;
+  padding: 20px;
+  cursor: pointer;
+}
+.controls div:hover {
+  background-color: hsl(0, 0%, 27%);
+}
+.furniture {
+  display: flex;
+}
+.second {
+  margin-left: auto;
+  width: 35%;
+  margin-top: 44px;
+}
+.second p {
+  color: hsl(0, 0%, 63%);
+  line-height: 1.4;
+  margin-top: 5px;
+}
+.menu,
+.close {
+  display: none;
+}
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: column;
+  }
+  .main-im {
+    background-image: url("../images/mobile-image-hero-1.jpg");
+    height: 360px;
+    width: 100%;
+  }
+  img.logo {
+    margin-left: auto;
+  }
+  ul {
+    display: none;
+    position: fixed;
+    background-color: white;
+    padding: 50px;
+    margin-top: -50px;
+    width: 100%;
+  }
+  ul li {
+    color: black;
+  }
+  .menu {
+    display: block;
+    order: -1;
+    margin-left: 25px;
+  }
+  .controls {
+    left: 71.5%;
+    top: 36%;
+  }
+  .text {
+    margin-left: 25px;
+  }
+  .text h1,
+  .text p {
+    width: 100%;
+  }
+  .text div p {
+    margin-bottom: 30px;
+  }
+  .furniture {
+    flex-direction: column;
+  }
+  .first,
+  .third {
+    overflow-x: hidden;
+  }
+  .second {
+    margin-left: 25px;
+    margin-bottom: 44px;
+    width: 90%;
+  }
+  nav {
+    justify-content: space-between;
+  }
+  .close {
+    z-index: 10;
+    order: -1;
+    margin-left: 15px;
+    margin-top: -3px;
+    position: fixed;
+  }
+}
